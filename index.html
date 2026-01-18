@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delight Grove | Home of Flavors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ghana-red: #CE1126;
+            --ghana-yellow: #FCD116;
+            --ghana-green: #006B3F;
+        }
+
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .nav-link { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
+        
+        .kente-border {
+            background-color: var(--ghana-yellow);
+            background-image: repeating-linear-gradient(45deg, var(--ghana-red) 25%, transparent 25%, transparent 75%, var(--ghana-red) 75%, var(--ghana-red)), 
+                              repeating-linear-gradient(45deg, var(--ghana-red) 25%, var(--ghana-yellow) 25%, var(--ghana-yellow) 75%, var(--ghana-red) 75%, var(--ghana-red));
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+            height: 10px;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-card:hover img { transform: scale(1.1); }
+        
+        /* Active Nav indicator for the current page */
+        .active-nav { color: var(--ghana-red) !important; border-bottom: 3px solid var(--ghana-red); }
+    </style>
+</head>
+<body class="bg-white text-stone-800">
+
+    <div class="kente-border"></div>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md border-b-2 border-yellow-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+                    <div class="p-2 bg-white rounded-full shadow-md">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FCD116" stroke="#000" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-black tracking-tighter text-stone-900 hidden sm:block">DELIGHT GROVE</span>
+                </a>
+
+                <div class="flex gap-6 md:gap-10">
+                    <a href="index.html" class="nav-link font-bold text-sm tracking-widest hover:text-red-600 transition-colors py-2 active-nav">Home</a>
+                    <a href="restaurant_menu_demo.html" class="nav-link font-bold text-sm tracking-widest hover:text-red-600 transition-colors py-2">Our Menu</a>
+                    <a href="#locations" class="nav-link font-bold text-sm tracking-widest hover:text-red-600 transition-colors py-2">Locations</a>
+                </div>
+
+                <div class="hidden md:block">
+                     <a href="restaurant_menu_demo.html" class="bg-red-600 text-white px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-green-700 transition-all shadow-lg">
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-gradient h-[70vh] flex items-center justify-center text-center text-white px-6">
+            <div class="max-w-4xl">
+                <span class="bg-yellow-400 text-red-700 px-4 py-1 font-black rounded-full text-xs tracking-widest mb-4 inline-block">FRESH & HOT IN TAMALE</span>
+                <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none">THE TASTE THAT BRINGS YOU HOME</h1>
+                <p class="text-lg md:text-xl font-medium mb-10 text-stone-200">From Artisan Pizzas to Smoky Jollof – We serve the world with a Ghanaian heart.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="restaurant_menu_demo.html" class="bg-red-600 text-white px-10 py-4 rounded-full font-black text-sm tracking-widest shadow-2xl hover:bg-green-700 transition-all text-center">VIEW FULL MENU</a>
+                    <a href="#locations" class="bg-white text-stone-900 px-10 py-4 rounded-full font-black text-sm tracking-widest shadow-2xl hover:bg-yellow-400 transition-all flex items-center justify-center">LOCATE US</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black text-stone-900 mb-2">Explore Our Cuisines</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="restaurant_menu_demo.html" class="category-card group block overflow-hidden rounded-[2.5rem] relative h-96 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" alt="Pizza">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-black">Pizza Piazza</h3>
+                        <p class="text-sm text-yellow-400 font-bold tracking-widest">Cheesy Greatness</p>
+                    </div>
+                </a>
+
+                <a href="restaurant_menu_demo.html" class="category-card group block overflow-hidden rounded-[2.5rem] relative h-96 shadow-2xl">
+                    <img src="pic_jollof_waakye.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" alt="Local Dishes">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-black">Motherland Classics</h3>
+                        <p class="text-sm text-yellow-400 font-bold tracking-widest">Jollof & Waakye</p>
+                    </div>
+                </a>
+
+                <a href="restaurant_menu_demo.html" class="category-card group block overflow-hidden rounded-[2.5rem] relative h-96 shadow-2xl">
+                    <img src="pic_smoothie_sobolo.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" alt="Grilled Delights">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <h3 class="text-2xl font-black">Drinks</h3>
+                        <p class="text-sm text-yellow-400 font-bold tracking-widest">Sobolo & Smoothies</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="locations" class="bg-stone-100 py-20 px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-black mb-8">Visit Us in Tamale</h2>
+                <p class="text-stone-600 mb-4">Main Street, Opposite the Digital Center</p>
+                <p class="text-xl font-bold text-red-600">Open 24/7</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="kente-border"></div>
+    
+    <footer class="bg-stone-900 text-stone-500 py-16 text-center text-[10px] tracking-[0.2em] uppercase">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-center gap-8 mb-8">
+                <span class="w-3 h-3 bg-red-600 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-700 rounded-full"></span>
+            </div>
+            <p class="mb-2">Plot 12, Jisonayli Times St, Tamale</p>
+            <p class="mb-8">Reservations: 055 000 0000 | Open 10 AM - 11 PM</p>
+            <p>&copy; 2026 Delight Grove.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

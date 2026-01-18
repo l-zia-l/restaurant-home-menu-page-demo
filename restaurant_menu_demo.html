@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delight Grove | Full Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ghana-red: #CE1126;
+            --ghana-yellow: #FCD116;
+            --ghana-green: #006B3F;
+        }
+
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
+        
+        .kente-border {
+            background-color: var(--ghana-yellow);
+            background-image: repeating-linear-gradient(45deg, var(--ghana-red) 25%, transparent 25%, transparent 75%, var(--ghana-red) 75%, var(--ghana-red)), 
+                              repeating-linear-gradient(45deg, var(--ghana-red) 25%, var(--ghana-yellow) 25%, var(--ghana-yellow) 75%, var(--ghana-red) 75%, var(--ghana-red));
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+            height: 12px;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1590077428593-a55bb07c4665?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem 2.5rem;
+        }
+
+        .price-line {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .price-line::after {
+            content: "";
+            flex: 1;
+            border-bottom: 2px dotted #e5e7eb;
+            order: 2;
+        }
+        
+        .item-name { order: 1; color: #1a1a1a; font-weight: 700; }
+        .item-price { order: 3; font-weight: 800; color: var(--ghana-green); }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .section-header span {
+            height: 3px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, var(--ghana-red), var(--ghana-yellow), var(--ghana-green));
+        }
+
+        .btn-ghana {
+            background: var(--ghana-red);
+            transition: all 0.3s ease;
+        }
+        .btn-ghana:hover {
+            background: var(--ghana-green);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-white text-stone-800 leading-snug">
+
+    <div class="kente-border"></div>
+
+    <!-- Header Section -->
+    <header class="hero-bg h-[35vh] flex flex-col items-center justify-center text-center text-white px-4 border-b-4 border-yellow-400">
+        <div class="mb-4 p-3 bg-white rounded-full shadow-lg">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#FCD116" stroke="#000" stroke-width="1"/>
+            </svg>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black mb-1">Delight Grove</h1>
+        <p class="text-yellow-400 tracking-[0.2em] text-xs uppercase font-bold">Taste The Delight, Everyday!</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        
+        <!-- SECTION: THE MOTHERLAND -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-stone-900">Local Classics</h2>
+                <span></span>
+            </div>
+            <div class="menu-grid">
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Assorted Fried Rice</h3> <span class="item-price">GH₵65</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Wok-tossed with shrimp, chicken, beef & mixed veggies.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Smoky Party Jollof</h3> <span class="item-price">GH₵55</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Served with spicy chicken, plantain & shito.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Special Waakye</h3> <span class="item-price">GH₵50</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Wele, spaghetti, gari, egg, fish/meat.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Banku & Tilapia</h3> <span class="item-price">GH₵85</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Large grilled fish, fresh pepper & diced onions.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Pounded Fufu</h3> <span class="item-price">GH₵60</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">With goat meat light soup or peanut butter soup.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Red Red (Gobe)</h3> <span class="item-price">GH₵40</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Beans stew, palm oil, and caramelised plantain.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PIZZA PIAZZA -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-stone-900">Pizzas</h2>
+                <span></span>
+            </div>
+            <div class="menu-grid">
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">The Ultimate Feast</h3> <span class="item-price">GH₵120</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Loaded with beef, pepperoni, chicken, peppers, onions & olives.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Chicken Suya Pizza</h3> <span class="item-price">GH₵95</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Spicy suya chicken, yaji spice, onions, and extra cheese.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Garden Veggie</h3> <span class="item-price">GH₵85</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Mushrooms, bell peppers, sweetcorn, and fresh basil.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Double Pepperoni</h3> <span class="item-price">GH₵105</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Classic pepperoni with a double helping of mozzarella.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: WESTERN GRILL -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-2xl font-black text-stone-900">International Meals</h2>
+                <span></span>
+            </div>
+            <div class="menu-grid">
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Wagyu Smash Burger</h3> <span class="item-price">GH₵90</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Double patty, cheddar, signature sauce & fries.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">Chicken Alfredo</h3> <span class="item-price">GH₵75</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Creamy white sauce pasta with grilled chicken.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">T-Bone Steak</h3> <span class="item-price">GH₵160</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Grilled to perfection with garlic mash & jus.</p>
+                </div>
+                <div class="item-row">
+                    <div class="price-line"><h3 class="item-name">BBQ Pork Ribs</h3> <span class="item-price">GH₵115</span></div>
+                    <p class="text-[11px] text-stone-500 italic mt-1 uppercase">Slow-cooked honey BBQ ribs with coleslaw.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: SMOOTHIES & COCKTAILS -->
+        <div class="grid lg:grid-cols-2 gap-16 mb-16">
+            <!-- COCKTAILS -->
+            <section>
+                <div class="section-header">
+                    <h2 class="text-2xl font-black text-stone-900">Cocktails</h2>
+                    <span></span>
+                </div>
+                <div class="space-y-4">
+                    <div class="item-row">
+                        <div class="price-line"><h3 class="item-name">Martini</h3> <span class="item-price">GH₵45</span></div>
+                        <p class="text-[11px] text-stone-500 italic uppercase">Gin, hibiscus infusion, ginger & lime zest.</p>
+                    </div>
+                    <div class="item-row">
+                        <div class="price-line"><h3 class="item-name">Palm Wine Punch</h3> <span class="item-price">GH₵40</span></div>
+                        <p class="text-[11px] text-stone-500 italic uppercase">Fresh palm wine, white rum, and tropical bitters.</p>
+                    </div>
+                    <div class="item-row">
+                        <div class="price-line"><h3 class="item-name">Mojito</h3> <span class="item-price">GH₵50</span></div>
+                        <p class="text-[11px] text-stone-500 italic uppercase">Mint, sugar, lime, soda & premium light rum.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SMOOTHIES -->
+            <section>
+                <div class="section-header">
+                    <h2 class="text-2xl font-black text-stone-900">Smoothies</h2>
+                    <span></span>
+                </div>
+                <div class="space-y-4">
+                    <div class="item-row">
+                        <div class="price-line"><h3 class="item-name">Mango Tango</h3> <span class="item-price">GH₵35</span></div>
+                        <p class="text-[11px] text-stone-500 italic uppercase">Pure mango, greek yogurt, honey.</p>
+                    </div>
+                    <div class="item-row">
+                        <div class="price-line"><h3 class="item-name">Tropical Green</h3> <span class="item-price">GH₵35</span></div>
+                        <p class="text-[11px] text-stone-500 italic uppercase">Pineapple, spinach, apple & ginger.</p>
+                    </div>
+                    <div class="item-row">
+                        <div class="price-line"><h3 class="item-name">Berry Blast</h3> <span class="item-price">GH₵40</span></div>
+                        <p class="text-[11px] text-stone-500 italic uppercase">Mixed berries, banana, and almond milk.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Link / CTA -->
+        <div class="bg-stone-100 p-10 rounded-3xl text-center border-t-4 border-red-600 shadow-sm">
+            <h2 class="text-2xl font-black mb-4">Planning an Event?</h2>
+            <p class="text-stone-600 mb-8 max-w-md mx-auto">We offer full-service catering for weddings, corporate events, and private parties.</p>
+            <a href="index.html" class="btn-ghana inline-block text-white px-12 py-4 rounded-full font-black text-sm tracking-widest uppercase shadow-xl transition-transform">
+                Visit Official Website
+            </a>
+        </div>
+    </main>
+
+    <div class="kente-border"></div>
+    
+    <footer class="bg-stone-900 text-stone-500 py-16 text-center text-[10px] tracking-[0.2em] uppercase">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-center gap-8 mb-8">
+                <span class="w-3 h-3 bg-red-600 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-700 rounded-full"></span>
+            </div>
+            <p class="mb-2">Plot 12, Jisonayli Times St, Tamale</p>
+            <p class="mb-8">Reservations: 055 000 0000 | Open 10 AM - 11 PM</p>
+            <p>&copy; 2026 Delight Grove.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
